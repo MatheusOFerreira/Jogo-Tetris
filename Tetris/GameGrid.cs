@@ -1,6 +1,6 @@
 ﻿namespace Tetris
 {
-    public class GradeJogo
+    public class GameGrid
     {
         private readonly int[,] grid;
         public int Rows { get; }
@@ -13,7 +13,7 @@
 
         }
 
-        public GradeJogo(int linhas, int colunas)
+        public GameGrid(int linhas, int colunas)
         {
             Rows = linhas;
             Columns = colunas;
