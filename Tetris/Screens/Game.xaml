@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Tetris.Game"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="590" Height="960">
+    <Viewbox Stretch="UniformToFill">
+        <Grid Width="590" Height="960">
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Assets/background_new.jpg"/>
+            </Grid.Background>
+
+            <!-- Campo de jogo -->
+            <Canvas x:Name="GameCanvas"
+                    Background="Transparent"
+                    Margin="17,91,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    ClipToBounds="True"
+                    Loaded="GameCanvas_Loaded"/>
+
+            <!-- Pontuação -->
+            <TextBlock x:Name="ScoreText"
+                       Width="75"
+                       Height="32"
+                       Margin="530,102,-15,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Text="0"
+                       FontFamily="pack://application:,,,/Fonts/#Telelower"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       TextAlignment="Left"
+                       TextWrapping="Wrap"/>
+
+            <!-- Próxima peça -->
+            <StackPanel Margin="437,182,0,0"
+                        Width="135"
+                        Height="107"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+                <Image x:Name="NextImage"
+                       Width="135"
+                       Height="105"
+                       Stretch="Uniform"/>
+            </StackPanel>
+
+            <!-- Botão invisível Pause -->
+            <Button x:Name="PauseButton"
+                    Content=""
+                    Width="139"
+                    Height="69"
+                    Margin="437,350,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Background="Transparent"
+                    BorderBrush="{x:Null}"
+                    Click="Pause_Click"/>
+        </Grid>
+    </Viewbox>
+</UserControl>
